@@ -3,6 +3,11 @@ frontend:
   phases:
     preBuild:
       commands:
+        # Gatsby 5 needs Node 18+. Amplify's default build image may ship an
+        # older Node, so pin to the version in .nvmrc before installing.
+        - nvm install $(cat .nvmrc)
+        - nvm use $(cat .nvmrc)
+        - node -v
         - yarn install
     build:
       commands:
@@ -14,10 +19,3 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
-  customHeaders:
-    - pattern: '*.pdf'
-      headers:
-        - key: 'Content-Type'
-          value: 'application/pdf'
-        - key: 'Content-Disposition'
-          value: 'inline'
