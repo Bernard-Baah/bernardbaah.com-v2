@@ -1,13 +1,15 @@
 const config = require('./src/config');
 
+// Analytics is off until a GA4 measurement ID (G-XXXXXXXXXX) is supplied at build time.
+const gaMeasurementId = process.env.GATSBY_GA_MEASUREMENT_ID;
+
 module.exports = {
   siteMetadata: {
     title: 'Bernard Buabeng Baah',
     description:
-      'Bernard Buabeng Baah is an AWS Certified Cloud Practitioner and Data Center Technician with hands-on experience in cloud infrastructure and data center operations.',
+      'Bernard Buabeng Baah designs and builds AWS architectures with Terraform. AWS Certified Cloud Practitioner and Data Center Infrastructure Technician at Amazon Web Services.',
     siteUrl: 'https://www.bernardbaah.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bernardbaah',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,6 +32,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    ...(gaMeasurementId
+      ? [
+        {
+          resolve: `gatsby-plugin-google-gtag`,
+          options: {
+            trackingIds: [gaMeasurementId],
+            gtagConfig: { anonymize_ip: true },
+          },
+        },
+      ]
+      : []),
     {
       resolve: `gatsby-source-filesystem`,
       options: {
