@@ -317,7 +317,7 @@ const Featured = () => {
               title
               cover {
                 childImageSharp {
-                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP])
+                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO])
                 }
               }
               tech
