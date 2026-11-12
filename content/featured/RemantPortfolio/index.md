@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '7'
 title: 'Remant K C — Portfolio Website'
 cover: './cover.png'
 github: 'https://github.com/Bernard-Baah/remant-kc-portfolio'

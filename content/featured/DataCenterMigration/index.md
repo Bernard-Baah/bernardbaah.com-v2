@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '6'
 title: 'Data Center Migration'
 cover: './cover.png'
 github: 'https://github.com/Bernard-Baah'
