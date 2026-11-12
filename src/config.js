@@ -6,12 +6,6 @@ module.exports = {
       name: 'GitHub',
       url: 'https://github.com/Bernard-Baah',
     },
-    /*
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
-    },
-    */
     {
       name: 'Linkedin',
       url: 'https://linkedin.com/in/bernard-buabeng-baah-449958156',
@@ -24,7 +18,11 @@ module.exports = {
       url: '/#about',
     },
     {
-      name: 'Work',
+      name: 'Experience',
+      url: '/#jobs',
+    },
+    {
+      name: 'Projects',
       url: '/#projects',
     },
     {
