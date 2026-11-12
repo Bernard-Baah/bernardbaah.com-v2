@@ -3,8 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
-        # Gatsby 5 needs Node 18+. Amplify's default build image may ship an
-        # older Node, so pin to the version in .nvmrc before installing.
+        # Dependencies require Node 22.12+ (sanitize-html, via
+        # gatsby-transformer-remark). Pin to the version in .nvmrc before installing.
         - nvm install $(cat .nvmrc)
         - nvm use $(cat .nvmrc)
         - node -v

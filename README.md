@@ -23,7 +23,7 @@ This is a from-scratch repository replacing [`bernard-iteration1-portfolio`](htt
 - Removed leftover template content (placeholder work history, sample projects and demo blog posts that shipped with the original template), along with the Archive and Pensieve blog features that only existed to render it.
 - Upgraded Gatsby 3 → 5, React 17 → 18, and the full plugin set to their current majors.
 - Dropped the dead Universal Analytics integration (Google sunset UA in July 2023). Analytics and Search Console verification are now opt-in through build-time environment variables (see below).
-- Requires Node 18+ (`.nvmrc` pinned to 20).
+- Requires Node 22.12+ (`.nvmrc` pinned to 22).
 
 ## 🛠 Installation & Set Up
 
