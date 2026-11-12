@@ -21,7 +21,7 @@ const StyledAboutSection = styled.section`
 const StyledText = styled.div`
   ul.skills-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-columns: repeat(2, minmax(140px, 240px));
     grid-gap: 0 10px;
     padding: 0;
     margin: 20px 0 0 0;
@@ -126,14 +126,18 @@ const About = () => {
   }, []);
 
   const skills = [
-    'AWS / CloudFormation',
-    'Python',
-    'JavaScript',
+    'Terraform / CloudFormation',
+    'VPC / CloudFront / WAF',
+    'EC2 Auto Scaling / RDS',
+    'Lambda / Step Functions',
+    'DynamoDB / EventBridge',
+    'Organizations / SCPs',
+    'GuardDuty / Security Hub',
+    'CloudWatch / X-Ray / ELK',
+    'Python / JavaScript',
     'Linux / Windows Server',
-    'Terraform',
     'TCP/IP / VLANs / DNS',
-    'CloudWatch / ELK Stack',
-    'Git / GitHub',
+    'Git / GitHub Actions',
   ];
 
   return (
@@ -144,28 +148,32 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Bernard — an{' '}
+              Hello! My name is Bernard. I design and build cloud architecture on AWS, and I learn
+              by building: my{' '}
+              <a href="https://github.com/Bernard-Baah/aws-architect-portfolio">
+                solutions architect portfolio
+              </a>{' '}
+              is five connected projects in Terraform, each one tested against failure and measured.
+              I'm an{' '}
               <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">
                 AWS Certified Cloud Practitioner
-              </a>{' '}
-              with hands-on experience in data center operations, cloud infrastructure, and security.
-              I'm passionate about building reliable systems and ensuring operational efficiency at scale.
+              </a>
+              .
             </p>
 
             <p>
-              I currently work at{' '}
-              <a href="https://aws.amazon.com/">Amazon Web Services</a> in Manassas, VA as a Data
-              Center Infrastructure Technician, where I perform L3-level troubleshooting and incident
-              response in hyperscale AWS environments, execute 30+ rack deployments monthly, and
-              validate 200+ fiber cabling connections with a 99.9% first-pass rate. Previously, I
-              supported logistics operations at the AWS Chantilly data center, managing 700+ server
-              inventories and maintaining 99.9% uptime.
+              I currently work at <a href="https://aws.amazon.com/">Amazon Web Services</a> in
+              Manassas, VA as a Data Center Infrastructure Technician, where I perform L3-level
+              troubleshooting and incident response in hyperscale AWS environments, execute 30+ rack
+              deployments monthly, and validate 200+ fiber cabling connections with a 99.9%
+              first-pass rate. Previously, I supported logistics operations at the AWS Chantilly
+              data center, managing 700+ server inventories and maintaining 99.9% uptime.
             </p>
 
             <p>
               I hold an AS in Engineering from Northern Virginia Community College and have been
-              recognized on the Dean's List. I'm always looking to leverage my expertise in
-              challenging cloud and data center roles.
+              recognized on the Dean's List. I'm looking for solutions architect and cloud
+              engineering roles where knowing the hardware under the cloud is an advantage.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
@@ -178,12 +186,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <img
-              className="img"
-              src="/bernard.jpg"
-              width={500}
-              alt="Headshot"
-            />
+            <img className="img" src="/bernard.jpg" width={500} alt="Bernard Buabeng Baah" />
           </div>
         </StyledPic>
       </div>

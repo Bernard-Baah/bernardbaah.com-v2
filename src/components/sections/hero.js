@@ -40,9 +40,15 @@ const StyledHeroSection = styled.section`
     max-width: 540px;
   }
 
-  .email-link {
-    ${({ theme }) => theme.mixins.bigButton};
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-top: 50px;
+  }
+
+  .hero-button {
+    ${({ theme }) => theme.mixins.bigButton};
   }
 `;
 
@@ -62,8 +68,13 @@ const StyledTypewriter = styled.h3`
   }
 
   @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
   }
 `;
 
@@ -72,7 +83,7 @@ const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const [typingDone, setTypingDone] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
-  const fullText = 'I build things for the cloud.';
+  const fullText = 'I design and build for the cloud.';
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -84,7 +95,9 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    if (!isMounted || prefersReducedMotion) return;
+    if (!isMounted || prefersReducedMotion) {
+      return;
+    }
 
     const startDelay = setTimeout(() => {
       let i = 0;
@@ -96,9 +109,9 @@ const Hero = () => {
           setTypingDone(true);
           clearInterval(interval);
         }
-      }, 60);
+      }, 40);
       return () => clearInterval(interval);
-    }, 1500);
+    }, 600);
 
     return () => clearTimeout(startDelay);
   }, [isMounted]);
@@ -114,17 +127,26 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm an AWS Certified Cloud Practitioner with hands-on experience in data center operations,
-        cloud infrastructure, and security. I specialize in server maintenance, network
-        troubleshooting, and ensuring operational efficiency and uptime at{' '}
+        I design and build AWS architectures in Terraform, then test them against real failures and
+        measure the results. By day I'm a Data Center Infrastructure Technician at{' '}
         <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer">
           Amazon Web Services
         </a>
-        .
+        , so I know the cloud from the rack up.
       </p>
     </>
   );
-  const items = [one, two, three, four];
+  const five = (
+    <div className="hero-actions">
+      <a className="hero-button" href="/#projects">
+        View my projects
+      </a>
+      <a className="hero-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+        Resume
+      </a>
+    </div>
+  );
+  const items = [one, two, three, four, five];
 
   return (
     <StyledHeroSection>

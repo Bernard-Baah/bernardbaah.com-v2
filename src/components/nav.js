@@ -225,7 +225,7 @@ const Nav = ({ isHome }) => {
   );
 
   const ResumeLink = (
-    <a className="resume-button" href="https://docs.google.com/viewer?url=https://www.bernardbaah.com/resume.pdf" target="_blank" rel="noopener noreferrer">
+    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
       Resume
     </a>
   );
@@ -244,8 +244,17 @@ const Nav = ({ isHome }) => {
                     const sectionId = url.replace('/#', '');
                     const isActive = activeSection === sectionId;
                     return (
-                      <li key={i} style={{ borderBottom: isActive ? '2px solid var(--green)' : '2px solid transparent', transition: 'var(--transition)' }}>
-                        <Link to={url} style={{ color: isActive ? 'var(--green)' : '' }}>{name}</Link>
+                      <li
+                        key={i}
+                        style={{
+                          borderBottom: isActive
+                            ? '2px solid var(--green)'
+                            : '2px solid transparent',
+                          transition: 'var(--transition)',
+                        }}>
+                        <Link to={url} style={{ color: isActive ? 'var(--green)' : '' }}>
+                          {name}
+                        </Link>
                       </li>
                     );
                   })}
@@ -253,7 +262,9 @@ const Nav = ({ isHome }) => {
               <div>{ResumeLink}</div>
             </StyledLinks>
 
-            <div className="mobile-only"><Menu /></div>
+            <div className="mobile-only">
+              <Menu />
+            </div>
           </>
         ) : (
           <>
@@ -275,8 +286,18 @@ const Nav = ({ isHome }) => {
                       const isActive = activeSection === sectionId;
                       return (
                         <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-                          <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms`, borderBottom: isActive ? '2px solid var(--green)' : '2px solid transparent', transition: 'var(--transition)' }}>
-                            <Link to={url} style={{ color: isActive ? 'var(--green)' : '' }}>{name}</Link>
+                          <li
+                            key={i}
+                            style={{
+                              transitionDelay: `${isHome ? i * 100 : 0}ms`,
+                              borderBottom: isActive
+                                ? '2px solid var(--green)'
+                                : '2px solid transparent',
+                              transition: 'var(--transition)',
+                            }}>
+                            <Link to={url} style={{ color: isActive ? 'var(--green)' : '' }}>
+                              {name}
+                            </Link>
                           </li>
                         </CSSTransition>
                       );
