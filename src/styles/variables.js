@@ -16,23 +16,6 @@ const variables = css`
     --green-tint: rgba(100, 255, 218, 0.1);
     --pink: #f57dff;
     --blue: #57cbff;
-  }
-
-  :root[data-theme='light'] {
-    --dark-navy: #f5f5f5;
-    --navy: #ffffff;
-    --light-navy: #e8e8e8;
-    --lightest-navy: #d0d0d0;
-    --navy-shadow: rgba(0, 0, 0, 0.1);
-    --dark-slate: #a0a0a0;
-    --slate: #4a4a4a;
-    --light-slate: #333333;
-    --lightest-slate: #111111;
-    --white: #0a0a0a;
-    --green: #0a7c5c;
-    --green-tint: rgba(10, 124, 92, 0.1);
-    --pink: #c026d3;
-    --blue: #0369a1;
 
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
       sans-serif;
