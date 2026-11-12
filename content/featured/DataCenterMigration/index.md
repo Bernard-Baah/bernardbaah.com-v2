@@ -2,8 +2,8 @@
 date: '6'
 title: 'Data Center Migration'
 cover: './cover.png'
-github: 'https://github.com/Bernard-Baah'
-external: 'https://github.com/Bernard-Baah'
+github: ''
+external: ''
 cta: ''
 tech:
   - AWS

@@ -253,7 +253,8 @@ const StyledProject = styled.li`
       opacity: 0.25;
     }
 
-    a {
+    a,
+    .image-frame {
       width: 100%;
       height: 100%;
       background-color: var(--green);
@@ -357,6 +358,7 @@ const Featured = () => {
             const { frontmatter, html } = node;
             const { external, title, tech, github, cover, cta } = frontmatter;
             const image = getImage(cover);
+            const link = external || github;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
@@ -364,9 +366,7 @@ const Featured = () => {
                   <div>
                     <p className="project-overline">Featured Project</p>
 
-                    <h3 className="project-title">
-                      <a href={external || github}>{title}</a>
-                    </h3>
+                    <h3 className="project-title">{link ? <a href={link}>{title}</a> : title}</h3>
 
                     <div
                       className="project-description"
@@ -402,9 +402,15 @@ const Featured = () => {
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className="img" />
-                  </a>
+                  {link ? (
+                    <a href={link}>
+                      <GatsbyImage image={image} alt={title} className="img" />
+                    </a>
+                  ) : (
+                    <div className="image-frame">
+                      <GatsbyImage image={image} alt={title} className="img" />
+                    </div>
+                  )}
                 </div>
               </StyledProject>
             );
