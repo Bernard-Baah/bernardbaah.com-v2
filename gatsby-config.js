@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: 'Bernard Buabeng Baah',
     description:
-      'Bernard Buabeng Baah designs and builds AWS architectures with Terraform. AWS Certified Cloud Practitioner and Data Center Infrastructure Technician at Amazon Web Services.',
+      'Bernard Buabeng Baah designs and builds AWS architectures with Terraform. AWS Certified Solutions Architect – Professional and Data Center Infrastructure Technician at Amazon Web Services.',
     siteUrl: 'https://www.bernardbaah.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
   },

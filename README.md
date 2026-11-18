@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  Personal portfolio website of <a href="https://www.bernardbaah.com" target="_blank">Bernard Buabeng Baah</a> — AWS Certified Cloud Practitioner & Data Center Technician. Built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby 5</a> and React 18, hosted on <a href="https://aws.amazon.com/amplify/" target="_blank">AWS Amplify</a>.
+  Personal portfolio website of <a href="https://www.bernardbaah.com" target="_blank">Bernard Buabeng Baah</a> — AWS Certified Solutions Architect – Professional and Data Center Infrastructure Technician. Built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby 5</a> and React 18, hosted on <a href="https://aws.amazon.com/amplify/" target="_blank">AWS Amplify</a>.
 </p>
 
 <p align="center">

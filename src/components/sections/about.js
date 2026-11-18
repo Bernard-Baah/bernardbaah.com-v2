@@ -127,17 +127,19 @@ const About = () => {
 
   const skills = [
     'Terraform / CloudFormation',
-    'VPC / CloudFront / WAF',
-    'EC2 Auto Scaling / RDS',
+    'GitHub Actions / Git',
+    'EC2 / ALB / Auto Scaling',
+    'VPC / CloudFront / Route 53',
+    'RDS / S3 / DynamoDB',
     'Lambda / Step Functions',
-    'DynamoDB / EventBridge',
-    'Organizations / SCPs',
+    'Organizations / SCPs / IAM',
     'GuardDuty / Security Hub',
     'CloudWatch / X-Ray / ELK',
-    'Python / JavaScript',
+    'Python / Bash / JavaScript',
     'Linux / Windows Server',
     'TCP/IP / VLANs / DNS',
-    'Git / GitHub Actions',
+    'Rack & stack / Fiber',
+    'L3 troubleshooting',
   ];
 
   return (
@@ -155,8 +157,8 @@ const About = () => {
               </a>{' '}
               is five connected projects in Terraform, each one tested against failure and measured.
               I'm an{' '}
-              <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">
-                AWS Certified Cloud Practitioner
+              <a href="https://aws.amazon.com/certification/certified-solutions-architect-professional/">
+                AWS Certified Solutions Architect – Professional
               </a>
               .
             </p>
@@ -171,9 +173,10 @@ const About = () => {
             </p>
 
             <p>
-              I hold an AS in Engineering from Northern Virginia Community College and have been
-              recognized on the Dean's List. I'm looking for solutions architect and cloud
-              engineering roles where knowing the hardware under the cloud is an advantage.
+              I'm working toward a BS in Cloud and Network Engineering at Western Governors
+              University, and I hold an AS in Engineering from Northern Virginia Community College,
+              where I made the Dean's List. I'm looking for cloud infrastructure and data center
+              roles where knowing the hardware under the cloud is an advantage.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>

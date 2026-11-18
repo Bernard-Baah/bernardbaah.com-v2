@@ -7,6 +7,5 @@ range: 'April 2024 - December 2025'
 url: 'https://aws.amazon.com/'
 ---
 
-- Managed inventories of 700+ servers, including tracking, auditing and reporting on stock levels to maintain operational efficiency
-- Coordinated inbound and outbound shipments, ensuring timely and accurate delivery of critical data center components
-- Maintained server hardware and network equipment, ensuring 99.9% uptime
+- Managed 700+ server inventory with tracking, audits and stock reporting; coordinated inbound and outbound shipments of critical data center components
+- Maintained server and network hardware at 99.9% uptime

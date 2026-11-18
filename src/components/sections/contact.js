@@ -60,7 +60,7 @@ const Contact = () => {
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        I’m open to solutions architect and cloud engineering roles. If you have an opportunity, a
+        I’m open to cloud infrastructure and data center roles. If you have an opportunity, a
         question about one of my projects, or just want to say hello, my inbox is open and I’ll get
         back to you.
       </p>
